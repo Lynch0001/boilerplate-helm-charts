@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #
 # Shell script to create new DEMO Cluster project helm chart values files
