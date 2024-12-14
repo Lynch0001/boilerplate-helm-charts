@@ -8,7 +8,7 @@
 #
 echo "started helm build"
 TARGET_PROJECT=$1
-BASE_PATH_PREFIX="."
+BASE_PATH_PREFIX="boilerplate-helm-charts"
 BOILERPLATE_PATH="/media/psf/workspace"
 BOILERPLATE_BINARY="boilerplate_linux_arm64"
 
