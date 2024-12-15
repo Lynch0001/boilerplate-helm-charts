@@ -1,0 +1,7 @@
+# values for DEMO charlie ingester
+
+replicas: 1
+
+serverHost=artemis-main.charlie-xibus-artemis
+port=62627
+
