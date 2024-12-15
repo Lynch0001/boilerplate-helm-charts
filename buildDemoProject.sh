@@ -16,7 +16,7 @@ BOILERPLATE_BINARY="boilerplate_linux_arm64"
 #
 
 SERVICE="archiver"
-BASE_PATH="$SERVICE/values/demo"
+BASE_PATH="boilerplate-helm-charts/$SERVICE/values/demo"
 cp $BASE_PATH/alpha/values.yaml $BASE_PATH/alpha-template/values.yaml
 sed -i 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/values.yaml
 sed -i 's/replicas: .*/replicas: {{ .ArchiverVariables.replicas }}/g' $BASE_PATH/alpha-template/values.yaml
@@ -29,7 +29,7 @@ rm $BASE_PATH/alpha-template/values.yaml
 # Console
 #
 SERVICE="console"
-BASE_PATH="$SERVICE/values/demo"
+BASE_PATH="/media/psf/workspace/boilerplate-helm-charts/$SERVICE/values/demo"
 cp $BASE_PATH/alpha/values.yaml $BASE_PATH/alpha-template/values.yaml
 sed -i 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/values.yaml
 sed -i 's/replicas: .*/replicas: {{ .ConsoleVariables.replicas }}/g' $BASE_PATH/alpha-template/values.yaml
