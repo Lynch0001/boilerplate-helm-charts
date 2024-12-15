@@ -1,7 +1,0 @@
-# values for DEMO gamma ingester
-
-replicas: 1
-
-serverHost=artemis-main.gamma-xibus-artemis
-port=62627
-
