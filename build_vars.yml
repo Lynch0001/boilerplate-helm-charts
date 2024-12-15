@@ -1,7 +1,7 @@
 # Demo Vars Template
 
 # project name
-Project: bravo
+Project: {{ .Project }}
 
 ArchiverVariables:
   replicas: 1
