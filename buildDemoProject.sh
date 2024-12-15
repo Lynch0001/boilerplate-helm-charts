@@ -22,7 +22,7 @@ sed -i 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/values.yaml
 sed -i 's/replicas: .*/replicas: {{ .ArchiverVariables.replicas }}/g' $BASE_PATH/alpha-template/values.yaml
 sed -i 's/minReplicas: .*/minReplicas: {{ .ArchiverVariables.scalerMin }}/g' $BASE_PATH/alpha-template/values.yaml
 sed -i 's/maxReplicas: .*/maxReplicas: {{ .ArchiverVariables.scalerMax }}/g' $BASE_PATH/alpha-template/values.yaml
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file build_vars.yml --template-url ./$BASE_PATH/alpha-template --output-folder $BASE_PATH/$TARGET_PROJECT --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-helm-charts/build_vars.yml --template-url ./$BASE_PATH/alpha-template --output-folder $BASE_PATH/$TARGET_PROJECT --non-interactive
 rm $BASE_PATH/alpha-template/values.yaml
 
 #
@@ -33,7 +33,7 @@ BASE_PATH="/media/psf/workspace/boilerplate-helm-charts/$SERVICE/values/demo"
 cp $BASE_PATH/alpha/values.yaml $BASE_PATH/alpha-template/values.yaml
 sed -i 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/values.yaml
 sed -i 's/replicas: .*/replicas: {{ .ConsoleVariables.replicas }}/g' $BASE_PATH/alpha-template/values.yaml
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file build_vars.yml --template-url ./$BASE_PATH/alpha-template --output-folder $BASE_PATH/$TARGET_PROJECT --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-helm-charts/build_vars.yml --template-url ./$BASE_PATH/alpha-template --output-folder $BASE_PATH/$TARGET_PROJECT --non-interactive
 rm $BASE_PATH/alpha-template/values.yaml
 
 #
