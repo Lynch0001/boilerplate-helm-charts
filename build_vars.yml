@@ -1,7 +1,7 @@
 # Demo Vars Template
 
 # project name
-Project: {{ .Project }}
+Project: gamma
 
 ArchiverVariables:
   replicas: 1

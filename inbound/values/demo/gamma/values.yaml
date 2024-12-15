@@ -1,0 +1,7 @@
+# values for DEMO gamma inbound
+
+replicas: 1
+
+serverHost=artemis-main.gamma-xibus-artemis
+port=62627
+
