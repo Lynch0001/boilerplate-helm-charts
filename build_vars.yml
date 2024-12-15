@@ -1,7 +1,7 @@
 # Demo Vars Template
 
 # project name
-Project: gamma
+Project: placeholder
 
 ArchiverVariables:
   replicas: 1

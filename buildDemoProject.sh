@@ -194,3 +194,5 @@ sed -i 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/values.yaml
 sed -i 's/replicas: .*/replicas: {{ .TwingateVariables.replicas }}/g' $BASE_PATH/alpha-template/values.yaml
 $BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-helm-charts/build_vars.yml --template-url $BASE_PATH/alpha-template --output-folder $BASE_PATH/$TARGET_PROJECT --non-interactive
 rm $BASE_PATH/alpha-template/values.yaml
+
+sed -i 's/Project: .*/Project: placeholder/g' boilerplate-helm-charts/build_vars.yml
