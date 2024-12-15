@@ -1,0 +1,10 @@
+# values for DEMO gamma console
+
+replicas: 1
+
+backup:
+  enabled: true
+
+serverHost=artemis-main.gamma-xibus-artemis
+port=62627
+
