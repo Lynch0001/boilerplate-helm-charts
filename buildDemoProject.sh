@@ -11,6 +11,8 @@ TARGET_PROJECT=$1
 BOILERPLATE_PATH="/media/psf/workspace"
 BOILERPLATE_BINARY="boilerplate_linux_arm64"
 
+sed -i 's/Project: .*/Project: {{ .Project }}/g' boilerplate-helm-charts/build_vars.yml
+
 #
 # Archiver
 #
