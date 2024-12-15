@@ -40,7 +40,7 @@ rm $BASE_PATH/alpha-template/values.yaml
 # Datastore
 #
 SERVICE="datastore"
-r/values/demo"
+BASE_PATH="boilerplate-helm-charts/$SERVICE/values/demo"
 cp $BASE_PATH/alpha/values.yaml $BASE_PATH/alpha-template/values.yaml
 sed -i 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/values.yaml
 sed -i 's/replicas: .*/replicas: {{ .DatastoreVariables.replicas }}/g' $BASE_PATH/alpha-template/values.yaml
