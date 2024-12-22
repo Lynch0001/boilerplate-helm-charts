@@ -8,8 +8,8 @@
 #
 echo "started helm build"
 TARGET_PROJECT=$1
-BOILERPLATE_PATH="/media/psf/workspace"
-BOILERPLATE_BINARY="boilerplate_linux_arm64"
+BOILERPLATE_PATH="/home/lynch/workspace/app"
+BOILERPLATE_BINARY="boilerplate_linux_amd64"
 
 sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' boilerplate-helm-charts/build_vars.yml
 
