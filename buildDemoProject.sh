@@ -19,7 +19,7 @@ sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' /Users/timothylynch/worksp
 #
 
 SERVICE="archiver"
-BASE_PATH="$REPO_PATH/$SERVICE/values/demo"
+BASE_PATH="$SERVICE/values/demo"
 cp /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha/values.yaml /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha-template/values.yaml
 sed -i 's/alpha/{{ .Project }}/g' /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha-template/values.yaml
 sed -i 's/replicas: .*/replicas: {{ .ArchiverVariables.replicas }}/g' /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha-template/values.yaml
