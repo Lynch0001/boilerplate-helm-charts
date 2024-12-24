@@ -10,7 +10,7 @@ echo "started helm build"
 TARGET_PROJECT=$1
 BOILERPLATE_PATH="."
 BOILERPLATE_BINARY="boilerplate_linux_amd64"
-REPO_PATH="boilerplate-helm-charts"
+REPO_PATH="."
 
 sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' boilerplate-helm-charts/build_vars.yml
 
