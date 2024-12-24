@@ -10,7 +10,7 @@ echo "started helm build"
 TARGET_PROJECT=$1
 BOILERPLATE_PATH="/Users/timothylynch/workspace/app"
 BOILERPLATE_BINARY="boilerplate_darwin_amd64"
-REPO_PATH="."
+ROOT_PATH="/Users/timothylynch/workspace/app/boilerplate-helm-charts"
 
 sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' /Users/timothylynch/workspace/app/boilerplate-helm-charts/build_vars.yml
 
@@ -20,12 +20,12 @@ sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' /Users/timothylynch/worksp
 
 SERVICE="archiver"
 BASE_PATH="$SERVICE/values/demo"
-cp /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha/values.yaml /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha-template/values.yaml
-sed -i 's/alpha/{{ .Project }}/g' /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha-template/values.yaml
-sed -i 's/replicas: .*/replicas: {{ .ArchiverVariables.replicas }}/g' /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha-template/values.yaml
-sed -i 's/minReplicas: .*/minReplicas: {{ .ArchiverVariables.scalerMin }}/g' /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha-template/values.yaml
-sed -i 's/maxReplicas: .*/maxReplicas: {{ .ArchiverVariables.scalerMax }}/g' /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha-template/values.yaml
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file /Users/timothylynch/workspace/app/boilerplate-helm-charts/build_vars.yml --template-url /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/alpha-template --output-folder /Users/timothylynch/workspace/app/boilerplate-helm-charts/$BASE_PATH/$TARGET_PROJECT --non-interactive
+cp $ROOT_PATH/$BASE_PATH/alpha/values.yaml $ROOT_PATH/$BASE_PATH/alpha-template/values.yaml
+sed -i 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/values.yaml
+sed -i 's/replicas: .*/replicas: {{ .ArchiverVariables.replicas }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/values.yaml
+sed -i 's/minReplicas: .*/minReplicas: {{ .ArchiverVariables.scalerMin }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/values.yaml
+sed -i 's/maxReplicas: .*/maxReplicas: {{ .ArchiverVariables.scalerMax }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/values.yaml
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT --non-interactive
 #rm $BASE_PATH/alpha-template/values.yaml
 #
 ##
