@@ -196,4 +196,4 @@ $BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_vars.yml --tem
 #$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-helm-charts/build_vars.yml --template-url $BASE_PATH/alpha-template --output-folder $BASE_PATH/$TARGET_PROJECT --non-interactive
 #rm $BASE_PATH/alpha-template/values.yaml
 
-sed -i 's/Project: .*/Project: placeholder/g' /Users/timothylynch/workspace/app/boilerplate-helm-charts/build_vars.yml
+sed -i 's/Project: .*/Project: placeholder/g' $ROOT_PATH/build_vars.yml
