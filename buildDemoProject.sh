@@ -26,7 +26,7 @@ sed -i  '' 's/replicas: .*/replicas: {{ .ArchiverVariables.replicas }}/g' $ROOT_
 sed -i  '' 's/minReplicas: .*/minReplicas: {{ .ArchiverVariables.scalerMin }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/values.yaml
 sed -i  '' 's/maxReplicas: .*/maxReplicas: {{ .ArchiverVariables.scalerMax }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/values.yaml
 $BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT --non-interactive
-rm $BASE_PATH/alpha-template/values.yaml
+rm $ROOT_PATH/$BASE_PATH/alpha-template/values.yaml
 
 #
 # Console
