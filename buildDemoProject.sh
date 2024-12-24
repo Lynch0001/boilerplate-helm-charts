@@ -12,7 +12,7 @@ BOILERPLATE_PATH="."
 BOILERPLATE_BINARY="boilerplate_linux_amd64"
 REPO_PATH="."
 
-sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' ./build_vars.yml
+sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' build_vars.yml
 
 #
 # Archiver
