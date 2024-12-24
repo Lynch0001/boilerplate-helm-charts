@@ -12,7 +12,7 @@ BOILERPLATE_PATH="/Users/timothylynch/workspace/app"
 BOILERPLATE_BINARY="boilerplate_darwin_amd64"
 REPO_PATH="."
 
-sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' build_vars.yml
+sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' /Users/timothylynch/workspace/app/boilerplate-helm-charts/build_vars.yml
 
 #
 # Archiver
