@@ -8,7 +8,7 @@
 #
 echo "started helm build"
 TARGET_PROJECT=$1
-BOILERPLATE_PATH="."
+BOILERPLATE_PATH="/Users/timothylynch/workspace/app"
 BOILERPLATE_BINARY="boilerplate_linux_amd64"
 REPO_PATH="."
 
