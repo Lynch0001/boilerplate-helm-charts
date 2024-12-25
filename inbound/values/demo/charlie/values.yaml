@@ -1,7 +1,0 @@
-# values for DEMO charlie inbound
-
-replicas: 1
-
-serverHost=artemis-main.charlie-xibus-artemis
-port=62627
-

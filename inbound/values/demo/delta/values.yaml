@@ -1,7 +1,0 @@
-# values for DEMO delta inbound
-
-replicas: 1
-
-serverHost=artemis-main.delta-xibus-artemis
-port=62627
-
