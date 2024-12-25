@@ -1,0 +1,7 @@
+# values for DEMO foxtrot ingester
+
+replicas: 1
+
+serverHost=artemis-main.foxtrot-xibus-artemis
+port=62627
+
