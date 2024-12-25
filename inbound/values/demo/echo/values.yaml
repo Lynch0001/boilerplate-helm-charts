@@ -1,0 +1,7 @@
+# values for DEMO echo inbound
+
+replicas: 1
+
+serverHost=artemis-main.echo-xibus-artemis
+port=62627
+
