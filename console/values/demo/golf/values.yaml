@@ -1,0 +1,10 @@
+# values for DEMO golf console
+
+replicas: 1
+
+backup:
+  enabled: true
+
+serverHost=artemis-main.golf-xibus-artemis
+port=62627
+

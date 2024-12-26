@@ -1,0 +1,7 @@
+# values for DEMO golf inbound
+
+replicas: 1
+
+serverHost=artemis-main.golf-xibus-artemis
+port=62627
+
