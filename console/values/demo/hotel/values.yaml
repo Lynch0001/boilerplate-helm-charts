@@ -1,0 +1,10 @@
+# values for DEMO hotel console
+
+replicas: 1
+
+backup:
+  enabled: true
+
+serverHost=artemis-main.hotel-xibus-artemis
+port=62627
+
