@@ -8,9 +8,9 @@
 #
 echo "started helm build"
 TARGET_PROJECT=$1
-BOILERPLATE_PATH="/Users/timothylynch/workspace/app"
+BOILERPLATE_PATH="/app"
 BOILERPLATE_BINARY="boilerplate_darwin_amd64"
-ROOT_PATH="/Users/timothylynch/workspace/app/boilerplate-helm-charts"
+ROOT_PATH="/app/boilerplate-helm-charts"
 
 sed -i  '' 's/Project: .*/Project: '"$TARGET_PROJECT"'/g' $ROOT_PATH/build_vars.yml
 
