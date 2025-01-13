@@ -1,0 +1,7 @@
+# values for DEMO india ingester
+
+replicas: 1
+
+serverHost=artemis-main.india-xibus-artemis
+port=62627
+
