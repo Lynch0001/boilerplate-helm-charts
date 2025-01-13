@@ -1,0 +1,10 @@
+# values for DEMO hotel deliver
+
+replicas: 1
+
+serverHost=artemis-main.hotel-xibus-artemis
+port=62627
+
+keda:
+  minReplicas: 1
+  maxReplicas: 1
